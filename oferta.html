@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Публичная оферта — BB.STUDIO</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&family=Unbounded:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#02020a;--s1:#06060e;--s2:#0a0a14;
+  --t1:#f0eeff;--t2:rgba(240,238,255,.6);--t3:rgba(240,238,255,.3);
+  --acc:#7c4dff;--pink:#ff3cac;--cyan:#00e5ff;--green:#00e5a0;--gold:#ffd166;
+  --b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.12);
+}
+html,body{cursor:default}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;min-height:100vh}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(2,2,10,.95);backdrop-filter:blur(32px);border-bottom:1px solid var(--b1)}
+.logo{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:900;letter-spacing:.08em;background:linear-gradient(110deg,var(--acc),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+.back-btn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px}
+.back-btn:hover{color:var(--cyan)}
+
+/* ─── HERO ─── */
+.hero{padding:80px 48px 60px;max-width:860px;margin:0 auto;border-bottom:1px solid var(--b1)}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.4em;color:var(--cyan);text-transform:uppercase;margin-bottom:20px}
+.hero-title{font-family:'Unbounded',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:900;line-height:.95;letter-spacing:-.03em;margin-bottom:20px}
+.hero-title span{background:linear-gradient(110deg,var(--acc),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--t3);letter-spacing:.1em;line-height:1.9}
+
+/* ─── MAIN CONTENT ─── */
+.wrap{max-width:860px;margin:0 auto;padding:60px 48px 100px}
+
+/* ─── SECTIONS ─── */
+.section{margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid var(--b1)}
+.section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+.sec-num{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
+.sec-title{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:700;color:var(--t1);margin-bottom:24px;letter-spacing:-.01em}
+
+p{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--t2);line-height:1.9;margin-bottom:16px}
+p:last-child{margin-bottom:0}
+
+/* ─── INFO BLOCKS ─── */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0}
+.info-cell{background:var(--s2);border:1px solid var(--b1);padding:20px 24px}
+.info-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:var(--t3);text-transform:uppercase;margin-bottom:8px}
+.info-value{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--t1);font-weight:500}
+.info-value a{color:var(--cyan);text-decoration:none}
+.info-value a:hover{text-decoration:underline}
+
+/* ─── CATALOG TABLE ─── */
+.catalog{margin:24px 0;border:1px solid var(--b1)}
+.cat-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;padding:14px 20px;border-bottom:1px solid var(--b1);font-family:'JetBrains Mono',monospace;font-size:12px;gap:16px}
+.cat-row:last-child{border-bottom:none}
+.cat-row.header{font-size:9px;letter-spacing:.25em;color:var(--t3);text-transform:uppercase;background:var(--s2)}
+.cat-name{color:var(--t1)}
+.cat-type{color:var(--t3);font-size:11px}
+.cat-price{color:var(--gold);font-weight:700;white-space:nowrap}
+
+/* ─── WARNING / IMPORTANT ─── */
+.warn-box{background:rgba(255,61,100,.06);border:1px solid rgba(255,61,100,.25);border-left:3px solid #ff3c6e;padding:20px 24px;margin:24px 0}
+.warn-box .warn-title{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:#ff3c6e;margin-bottom:10px;letter-spacing:-.01em}
+.warn-box p{color:rgba(240,238,255,.7);margin-bottom:8px}
+.warn-box p:last-child{margin-bottom:0}
+
+.info-box{background:rgba(124,77,255,.06);border:1px solid rgba(124,77,255,.2);border-left:3px solid var(--acc);padding:20px 24px;margin:24px 0}
+.info-box p{color:rgba(240,238,255,.7);margin-bottom:8px}
+.info-box p:last-child{margin-bottom:0}
+
+/* ─── LIST ─── */
+ul.styled{list-style:none;margin:16px 0;display:flex;flex-direction:column;gap:8px}
+ul.styled li{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--t2);line-height:1.7;padding-left:20px;position:relative}
+ul.styled li::before{content:'→';position:absolute;left:0;color:var(--acc)}
+
+/* ─── DIVIDER ─── */
+.divider{height:1px;background:var(--b1);margin:32px 0}
+
+/* ─── DATE ─── */
+.doc-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t3);letter-spacing:.15em;margin-top:40px;padding-top:24px;border-top:1px solid var(--b1)}
+
+/* ─── FOOTER ─── */
+footer{padding:28px 48px;border-top:1px solid var(--b1);display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3)}
+footer a{color:var(--t3);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--cyan)}
+
+@media(max-width:768px){
+  nav,footer{padding:0 20px;height:56px}
+  .hero,.wrap{padding-left:20px;padding-right:20px}
+  .hero{padding-top:48px}
+  .info-grid{grid-template-columns:1fr}
+  .cat-row{grid-template-columns:1fr auto;gap:8px}
+  .cat-type{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">BB.STUDIO</a>
+  <a class="back-btn" href="index.html">← НА ГЛАВНУЮ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">// Юридический документ</div>
+  <h1 class="hero-title">ПУБЛИЧНАЯ<br><span>ОФЕРТА</span></h1>
+  <div class="hero-sub">
+    Договор-оферта на приобретение цифровых товаров · BB.STUDIO<br>
+    Редакция от 01 февраля 2026 г.
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 1. ОБЩИЕ ПОЛОЖЕНИЯ -->
+  <div class="section">
+    <div class="sec-num">// 01</div>
+    <div class="sec-title">ОБЩИЕ ПОЛОЖЕНИЯ</div>
+    <p>Настоящий документ является публичной офертой Антона Г., действующего в статусе самозанятого гражданина Российской Федерации (далее — «Продавец»), и содержит все существенные условия договора на приобретение цифровых товаров.</p>
+    <p>Совершение акцепта оферты (оплата любым доступным способом) означает полное и безоговорочное согласие Покупателя со всеми условиями настоящего договора в соответствии со ст. 438 ГК РФ.</p>
+    <p>Оферта размещена на сайте <strong style="color:var(--t1)">bb.studio</strong> (далее — «Сайт»). Продавец вправе в одностороннем порядке изменять условия настоящей оферты без специального уведомления, публикуя новую редакцию на Сайте.</p>
+  </div>
+
+  <!-- 2. РЕКВИЗИТЫ ПРОДАВЦА -->
+  <div class="section">
+    <div class="sec-num">// 02</div>
+    <div class="sec-title">РЕКВИЗИТЫ ПРОДАВЦА</div>
+    <p>Продавец является самозанятым гражданином, применяющим специальный налоговый режим «Налог на профессиональный доход» в соответствии с Федеральным законом № 422-ФЗ.</p>
+
+    <div class="info-grid">
+      <div class="info-cell">
+        <div class="info-label">Статус</div>
+        <div class="info-value">Самозанятый</div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">ИНН</div>
+        <div class="info-value">680201874302</div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">Наименование</div>
+        <div class="info-value">Антон Г. · BB.STUDIO</div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">Email / Telegram</div>
+        <div class="info-value"><a href="https://t.me/beyond_birthdayLB" target="_blank">@beyond_birthdayLB</a></div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <p>Чек на оплату формируется автоматически в приложении «Мой налог» и направляется по запросу через Telegram. Продавец является плательщиком НПД и освобождён от уплаты НДС на основании ч. 9 ст. 2 Федерального закона № 422-ФЗ.</p>
+    </div>
+  </div>
+
+  <!-- 3. ПРЕДМЕТ ДОГОВОРА -->
+  <div class="section">
+    <div class="sec-num">// 03</div>
+    <div class="sec-title">ПРЕДМЕТ ДОГОВОРА — ЦИФРОВЫЕ ТОВАРЫ</div>
+    <p>Продавец передаёт, а Покупатель принимает и оплачивает право на использование цифровых товаров — <strong style="color:var(--t1)">HTML/CSS/JS-шаблонов для веб-разработки</strong>, размещённых на Сайте.</p>
+    <p>Каждый шаблон является самостоятельным, полностью готовым к использованию HTML-файлом, содержащим верстку, стили и скрипты. Передача производится в виде открытия доступа к исходному коду и возможности скачивания ZIP-архива на Сайте — немедленно после подтверждения платежа.</p>
+
+    <div class="catalog">
+      <div class="cat-row header">
+        <span>Товар</span>
+        <span>Тип</span>
+        <span>Стоимость</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-name">Полный доступ — все 20 шаблонов</span>
+        <span class="cat-type">Пакет</span>
+        <span class="cat-price">18 300 ₽</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-name">Шаблон категории «Флагман»</span>
+        <span class="cat-type">Поштучно</span>
+        <span class="cat-price">от 1 200 ₽</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-name">Шаблон стандартный</span>
+        <span class="cat-type">Поштучно</span>
+        <span class="cat-price">от 600 ₽</span>
+      </div>
+      <div class="cat-row">
+        <span class="cat-name">Бесплатные шаблоны (5 шт.)</span>
+        <span class="cat-type">Демо</span>
+        <span class="cat-price">0 ₽</span>
+      </div>
+    </div>
+
+    <p>Актуальные цены на каждый шаблон указаны непосредственно на Сайте и могут изменяться. Цена, действующая на момент акцепта, является окончательной для данной сделки.</p>
+  </div>
+
+  <!-- 4. ПОРЯДОК ОПЛАТЫ -->
+  <div class="section">
+    <div class="sec-num">// 04</div>
+    <div class="sec-title">ПОРЯДОК ОПЛАТЫ</div>
+    <p>Оплата производится через платёжную систему <strong style="color:var(--t1)">Robokassa</strong> — безопасный сертифицированный платёжный агрегатор, соответствующий требованиям российского законодательства.</p>
+
+    <ul class="styled">
+      <li>Банковская карта (МИР, Visa, Mastercard)</li>
+      <li>Система быстрых платежей (СБП)</li>
+      <li>ЮMoney</li>
+      <li>SberPay</li>
+      <li>QIWI</li>
+    </ul>
+
+    <p style="margin-top:16px">Оплата производится в российских рублях. Договор считается заключённым с момента подтверждения платежа платёжной системой Robokassa. Доступ к цифровому товару открывается <strong style="color:var(--t1)">автоматически</strong> на Сайте сразу после подтверждения платежа — без задержки.</p>
+  </div>
+
+  <!-- 5. ПЕРЕДАЧА ТОВАРА -->
+  <div class="section">
+    <div class="sec-num">// 05</div>
+    <div class="sec-title">ПЕРЕДАЧА ЦИФРОВОГО ТОВАРА</div>
+    <p>Цифровой товар считается переданным с момента открытия Покупателю доступа к исходному коду шаблона (шаблонов) на Сайте. С этого момента обязательства Продавца по передаче товара считаются выполненными в полном объёме.</p>
+    <p>Доступ привязан к уникальному идентификатору устройства и сохраняется в localStorage браузера. Покупателю предоставляется уникальный ключ доступа для восстановления доступа на других устройствах.</p>
+    <p>Приобретая товар, Покупатель получает право использовать шаблон в любом количестве личных и коммерческих проектов. Перепродажа, публикация исходного кода в открытом доступе и передача третьим лицам — запрещены.</p>
+  </div>
+
+  <!-- 6. ВОЗВРАТ -->
+  <div class="section">
+    <div class="sec-num">// 06</div>
+    <div class="sec-title">ВОЗВРАТ И ОТКАЗ ОТ ПОКУПКИ</div>
+
+    <div class="warn-box">
+      <div class="warn-title">⚠️ ВОЗВРАТ ДЕНЕЖНЫХ СРЕДСТВ НЕВОЗМОЖЕН</div>
+      <p>Цифровые товары (HTML/CSS/JS-шаблоны) возврату и обмену не подлежат. После открытия доступа к исходному коду возврат денежных средств не производится ни при каких обстоятельствах.</p>
+    </div>
+
+    <p>Данное положение основано на действующем законодательстве Российской Федерации:</p>
+    <ul class="styled">
+      <li>Закон РФ «О защите прав потребителей» — ст. 26.1, п. 4: товар надлежащего качества, имеющий индивидуально-определённые свойства, не подлежит возврату</li>
+      <li>Постановление Правительства РФ № 2463 от 31.12.2020 — цифровой контент, предоставленный в электронном виде, исключён из перечня товаров, подлежащих возврату</li>
+      <li>ГК РФ ст. 1273–1280 — исключительное право на результаты интеллектуальной деятельности</li>
+    </ul>
+
+    <p style="margin-top:16px"><strong style="color:var(--t1)">Почему возврат невозможен технически и юридически:</strong></p>
+    <p>Шаблоны — это цифровой контент, передаваемый путём предоставления доступа к исходному коду. После того как Покупатель получил доступ и мог ознакомиться с кодом, «вернуть» его в первоначальное состояние технически невозможно — информация уже передана. Это аналогично скачиванию файла: после скачивания оно не может быть «отменено».</p>
+
+    <div class="info-box">
+      <p>Перед покупкой каждый шаблон доступен в виде <strong>живого превью прямо на Сайте</strong>. У Покупателя есть полная возможность оценить внешний вид, анимации и функциональность шаблона до совершения оплаты. Принятие решения о покупке является осознанным.</p>
+    </div>
+
+    <p>В случае технических проблем с доступом (платёж прошёл, но доступ не открылся) — обратитесь в поддержку через Telegram <a href="https://t.me/beyond_birthdayLB" target="_blank" style="color:var(--cyan)">@beyond_birthdayLB</a>. Такие ситуации разрешаются в течение 24 часов.</p>
+  </div>
+
+  <!-- 7. ПРАВА И ОБЯЗАННОСТИ -->
+  <div class="section">
+    <div class="sec-num">// 07</div>
+    <div class="sec-title">ПРАВА И ОБЯЗАННОСТИ СТОРОН</div>
+
+    <p><strong style="color:var(--t1)">Продавец обязуется:</strong></p>
+    <ul class="styled">
+      <li>Обеспечить открытие доступа к оплаченному товару не позднее 5 минут после подтверждения платежа</li>
+      <li>Предоставить поддержку по вопросам работы с шаблоном через Telegram</li>
+      <li>Включать все новые шаблоны в пакет «Полный доступ» без дополнительной оплаты</li>
+      <li>Хранить факт оплаты и предоставлять чек по запросу</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <p><strong style="color:var(--t1)">Покупатель обязуется:</strong></p>
+    <ul class="styled">
+      <li>Не передавать исходный код шаблонов третьим лицам в коммерческих целях</li>
+      <li>Не публиковать полный исходный код шаблонов в открытом доступе (GitHub, CodePen и т.п.)</li>
+      <li>Не перепродавать приобретённые шаблоны как самостоятельный продукт</li>
+      <li>Не удалять авторские комментарии из кода при публикации производных работ</li>
+    </ul>
+  </div>
+
+  <!-- 8. ОТВЕТСТВЕННОСТЬ -->
+  <div class="section">
+    <div class="sec-num">// 08</div>
+    <div class="sec-title">ОТВЕТСТВЕННОСТЬ И ОГРАНИЧЕНИЯ</div>
+    <p>Шаблоны предоставляются «как есть» (as is). Продавец не несёт ответственности за совместимость шаблонов с конкретными браузерами, фреймворками или CMS, если это не заявлено явно в описании шаблона на Сайте.</p>
+    <p>Продавец не несёт ответственности за любые прямые или косвенные убытки Покупателя, возникшие в результате использования или невозможности использования приобретённых шаблонов.</p>
+    <p>Ответственность Продавца в любом случае ограничена суммой, уплаченной Покупателем за соответствующий товар.</p>
+  </div>
+
+  <!-- 9. ПЕРСОНАЛЬНЫЕ ДАННЫЕ -->
+  <div class="section">
+    <div class="sec-num">// 09</div>
+    <div class="sec-title">ПЕРСОНАЛЬНЫЕ ДАННЫЕ</div>
+    <p>При оплате через Robokassa обработка персональных данных осуществляется в соответствии с политикой конфиденциальности Robokassa. Продавец не собирает и не хранит данные банковских карт.</p>
+    <p>Уникальный идентификатор сессии хранится в localStorage браузера Покупателя исключительно для обеспечения доступа к оплаченным материалам и не передаётся третьим лицам.</p>
+  </div>
+
+  <!-- 10. КОНТАКТЫ -->
+  <div class="section">
+    <div class="sec-num">// 10</div>
+    <div class="sec-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+    <p>По всем вопросам, связанным с исполнением настоящего договора, обращайтесь:</p>
+
+    <div class="info-grid">
+      <div class="info-cell">
+        <div class="info-label">Telegram (основной)</div>
+        <div class="info-value"><a href="https://t.me/beyond_birthdayLB" target="_blank">@beyond_birthdayLB</a></div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">Сайт</div>
+        <div class="info-value"><a href="index.html">BB.STUDIO</a></div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">Режим поддержки</div>
+        <div class="info-value">10:00 – 23:00 МСК</div>
+      </div>
+      <div class="info-cell">
+        <div class="info-label">Время ответа</div>
+        <div class="info-value">До 24 часов</div>
+      </div>
+    </div>
+
+    <p>Споры и разногласия разрешаются путём переговоров. При недостижении соглашения — в судебном порядке по месту нахождения Продавца в соответствии с законодательством РФ.</p>
+
+    <div class="doc-date">
+      Документ вступает в силу с 01 февраля 2026 г. · ИНН 680201874302 · Самозанятый · BB.STUDIO
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 · BB.STUDIO · Beyond Birthday</span>
+  <a href="index.html">← НА ГЛАВНУЮ</a>
+</footer>
+
+</body>
+</html>
